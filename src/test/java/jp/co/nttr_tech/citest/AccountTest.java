@@ -16,6 +16,7 @@ import org.junit.Test;
  *
  */
 public class AccountTest {
+	private Account _account;
 
 	/**
 	 * @throws java.lang.Exception
@@ -36,6 +37,8 @@ public class AccountTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
+		_account = new Account();
+		
 	}
 
 	/**
@@ -47,7 +50,7 @@ public class AccountTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		assertTrue(_account.login("001","002"));
 	}
 
 }
