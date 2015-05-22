@@ -7,6 +7,9 @@ public class ValidateForm {
 		if(value.length() < len){
 			return false;
 		}
+		if(value.matches("^[0-9]$")){
+			return false;
+		}
 		return true;
 	}
 
