@@ -50,7 +50,11 @@ public class AccountTest {
 
 	@Test
 	public void test() {
-		assertTrue(_account.login("001","002"));
+		assertFalse(_account.login("001","002"));
+		assertFalse(_account.login("1234567","A234567"));
+		assertFalse(_account.login("1234567890","A234567890"));
+		assertFalse(_account.login("12345678901","12345678901"));
+		assertTrue(_account.login("12345678901","A2345678901"));
 	}
 
 }
