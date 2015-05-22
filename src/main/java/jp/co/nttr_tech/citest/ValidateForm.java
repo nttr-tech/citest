@@ -2,13 +2,9 @@ package jp.co.nttr_tech.citest;
 
 public class ValidateForm {
 	
-	static boolean isValidString(String value) {
+	static boolean isValidString(String value, int len) {
 		// 8文字以内はNG
-		if(value.length() < 8){
-			return false;
-		}
-		// 数字のみの8-10文字はNG
-		if(value.matches("^[0-9]{8,10}$")){
+		if(value.length() < len){
 			return false;
 		}
 		return true;
